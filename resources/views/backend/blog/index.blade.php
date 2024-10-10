@@ -20,16 +20,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach ($blog as $item)
                                         <tr>
                                             <td>1</td>
-                                            <td>Card title</td>
-                                            <td><img src="/" width="200" alt="images"></td>
+                                            <td>{{$item->title}}</td>
+                                            <td><img src="{{asset($item->file)}}" width="200" alt=""></td>
                                             <td><a href="" class="btn btn-warning">edit</a></td>
+                                            @csrf
                                             <form action="http://127.0.0.1:8000/backend/blog/aksi_hapus/1" method="post"></form>
                                                 <input type="hidden" name="_token" value="dVOiOcK6sUUFXAUWEe9Zr9PCp1IzwkXUV9FSoPAH" autocomplete="off">
-
-                                            
-                                        </tr>
+                                            </tr>
+                                            @endforeach
                                     </tbody>
                                     <tbody><tr>
                                         <td>2</td>

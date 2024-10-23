@@ -12,4 +12,8 @@ class SliderController extends Controller
         $slider=Slider::get();  
         return view('backend.slider.index',['slider'=>$slider]);
     }
+
+    public function tambah(){
+        return view('backend.slider.tambah');
+    }
 }

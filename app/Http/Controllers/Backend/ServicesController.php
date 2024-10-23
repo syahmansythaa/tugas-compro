@@ -12,4 +12,8 @@ class ServicesController extends Controller
         $service=Services::get();  
         return view('backend.layanan.index',['service'=>$service]);
     }
+
+    public function tambah(){
+        return view('backend.layanan.tambah');
+    }
 }
